@@ -4,15 +4,20 @@ My personal resume site refactored into polymer components.
 
 Todo:
 
-1. Refactor resume sections into polymer components. <b style="color:green">DONE</b>
+1. Refactor resume sections into polymer components. <b>DONE</b>
   * start by creating one component "resume-app" with all of the HTML from the previous index.html. The styles for that component will contain the entire bootstrap library until the refactoring phase is complete.
   * once all secionts of the resume are broken out into seperate components remove bootsrap as a dependency
 
-2. Update navbar from bootstrap to polymer app-layout app-header component. <b style="color:green">DONE</b>
-3. Get scroll spy working with the app-header component. <b style="color:green">DONE</b> (needs optimization)
+2. Update navbar from bootstrap to polymer app-layout app-header component. <b>DONE</b>
+
+3. Get scroll spy working with the app-header component. <b>DONE</b> (needs optimization)
+
 4. Update resume to 2017 skill set with a 'show more' button for skills. Increase UX of the skills section by indicating that the images can be flipped to view a descriptions of the skill. <b style="color:blue">Partially done</b>
+
 5. Add two main projects from 2017 with SVG animations of the projects functioning.
+
 6. Update experience with recent job/ posiiton and descriptions from paper resume
+
 7. Optimizations(TBD)
 
 ## Install the Polymer-CLI
