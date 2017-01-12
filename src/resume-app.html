@@ -51,6 +51,19 @@
       [hidden] {
         display: none !important;
       }
+      [sub-title] {
+        display: none;
+      }
+      @media(max-width: 600px) {
+        [main-title] {
+          font-size: 1.1em;
+        }
+        [sub-title] {
+          display: inline-block;
+          color: #f2f2f2;
+          font-size: .8em;
+        }
+      }
     </style>
  
  <iron-scroll-threshold id="threshold"
@@ -84,6 +97,7 @@
           <app-toolbar>
             <paper-icon-button class="menu-button" icon="menu" drawer-toggle hidden$="{{wideLayout}}"></paper-icon-button>
             <h1 main-title>Eric Dodson</h1>
+            <span sub-title>[[selected]]</span>
           </app-toolbar>
 
           <app-toolbar class="tabs-bar" hidden$="{{!wideLayout}}">

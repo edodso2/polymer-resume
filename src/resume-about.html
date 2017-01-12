@@ -32,6 +32,7 @@ A simple flip card for skills on my resume site
         width: 100%;
         padding: 40px;
         display: flex;
+        min-height: calc(100vh - 208px);
       }
 
       img {
@@ -50,15 +51,24 @@ A simple flip card for skills on my resume site
         line-height: 1.5em;
       }
 
-      @media(max-width: 767px) {
+      @media(max-width: 600px) {
+        :host {
+          padding-top: 20px;
+          padding-bottom: 10px;
+          min-height: calc( 100vh - 128px );
+          margin-top: -10px;
+        }
+
         paper-card {
           display: block;
           padding: 10px;
+          margin: auto;
+          width: calc( 100% - 20px );
         }
 
         img {
-          margin: 0;
-          margin-bottom: 20px;
+          display: block;
+          margin: 0 auto 20px auto;
         }
 
         .emphasize {
@@ -83,7 +93,10 @@ A simple flip card for skills on my resume site
             Hello,
           </div>
           <div class="intro">
-            my name is Eric Dodson. I have an Associates Degree in Computer Information Systems from Carroll Community College. Currently, I am a full time student at Towson University and majoring in Computer Science. I am expected to graduate this year with a Bachelors Degree. I have been interested in Web Development technologies since I learned XHTML in 2010. I am working as a Web Developer focusing on front-end development and CMS at Priority 1 Automotive Group. I am presently seeking to expand my knowledge in the Web Development field by learning technologies such as Angular, JSF, and Laravel.
+            I am a highly skilled web developer specializing in responsive interactive web applications. Experience
+            includes web site administrator at Priority 1 Automotive Group (BMW of Towson) and web developer at Carefirst BlueCross Blueshield.
+            Hands on experience utilizing technologies such as HTML5, CSS3, AngularJs, Bootstrap, and NodeJS to
+            develop public facing web applications. BS degree in computer science.
           </div>
         </div>
       </paper-card>

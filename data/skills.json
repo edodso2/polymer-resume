@@ -1,50 +1,86 @@
 [
   {
-    "imgUrl": "./src/images/HTML5.jpg", 
-    "description": "I have been working with HTML since I learned XHTML in 2010. I am very proficient in HTML5 and have lots of experience creating websites from scratch with no frameworks or development tools."
+    "imgUrl": "./data/logos/html.svg", 
+    "description": "I have been working with HTML since I learned XHTML in 2010. I am very proficient in HTML5 and have lots of experience creating websites from scratch."
   },
   {
-    "imgUrl": "./src/images/CSS3.jpg", 
-    "description": "I have built many web pages using CSS for styling. This page uses CSS3 transitions and transforms for effects."
+    "imgUrl": "./data/logos/css.svg", 
+    "description": "I have been working with CSS since I began writing HTML in 2010. I am proficient in all current and upcoming CSS features and have built pages using the new flexbox layout that are currently in produciton as of Nov 2016."
   },
   {
-    "imgUrl": "./src/images/JS.jpg", 
-    "description": "JavaScript has been used in many of my projects for form validation. I have also used JavaScript for slide-shows and other features not possible with HTML5 or CSS3."
+    "imgUrl": "./data/logos/javascript.svg", 
+    "description": "I am an expert at JavaScript and have a deep understanding of the core functinalities of the language such as closures, callbacks and prototypal inheritence."
   },
   {
-    "imgUrl": "./src/images/ajax.jpg", 
-    "description": "I commonly incorporate Ajax into my projects alongside PHP. I do this by calling a PHP script via Ajax to query a database and update page content."
+    "imgUrl": "./data/logos/angular.svg", 
+    "description": "I deployed my first angular app in January 2015 and have continued to gain expertice in the framework since then. I have recently gained a firm understanding of Angular2 by completeing various courses on udemy.com and working with NativeScript."
   },
   {
-    "imgUrl": "./src/images/jquery.jpg", 
-    "description": "JQuery is used in almost all my projects. Although I prefer Twitter Bootstrap for page layout, JQuery is helpful for adding widgets, simplifying JavaScript code, and creating animations."
+    "imgUrl": "./data/logos/bootstrap.svg", 
+    "description": "I use bootstrap on a daily basis to build HTML pages. I am well versed in all aspects of the framework and also have experience buiding custom bootstrap themes."
   },
   {
-    "imgUrl": "./src/images/php.jpg", 
+    "imgUrl": "./data/logos/nodejs.svg", 
+    "description": "I have built various REST API's with node.js in order to provided a backend for Angular applications. I have also built a proxy server with Node that manages a salesforce instance. Node.js is also my prefered langauage for any scripting tasks."
+  },
+  {
+    "imgUrl": "./data/logos/sass.svg", 
+    "description": "I use SASS in order to keep CSS clean and modular. In 2016 I migrated a large enterpirse level anguar app from one large CSS file to multiple organized SASS folders & files; drastically increasing maintainability and modularity."
+  },
+  {
+    "imgUrl": "./data/logos/postcss.svg", 
+    "description": "Although I have used many postcss plugins to achieve various different goals. I mainly use postcss to autoprefix CSS and to take advantage of some future CSS features."
+  },
+  {
+    "imgUrl": "./data/logos/nativescript.svg", 
+    "description": "I use nativescript with Angular2 in order to build mutlti platoform native applications. I have only built one application so far but am very comfortable and confident using the framework."
+  },
+  {
+    "imgUrl": "./data/logos/ai.svg", 
+    "description": "I have designed countless web pages and application features in AI. I am also proficient at making icons and SVG art."
+  },
+  {
+    "imgUrl": "./data/logos/axure.svg", 
+    "description": "I user axure for wireframing ideas and creating click through prototypes that can be presented to customers in order to aid in requirments gathering."
+  },
+  {
+    "imgUrl": "./data/logos/polymer.svg", 
+    "description": "I use polymer to take advantage of the upcoming web components feature. This resume site is built using web components in order to drastically increase modularity and maintainability."
+  },
+  {
+    "imgUrl": "./data/logos/grunt.svg", 
+    "description": "Grunt is my common choice for build tasks on complex angular applications. I use grunt for various tasks such as spinning up local servers and depolying code to production."
+  },
+  {
+    "imgUrl": "./data/logos/git.svg", 
+    "description": "Git is my preffered version control software. I use version control for all of my ongoing projects and push some of them to my github page."
+  },
+  {
+    "imgUrl": "./data/logos/aws.svg", 
+    "description": "Currently I have used elastic beanstalk to deploy an Angular 2 app and S3 to host a static website (this site is hosted on amazon s3). I also have professional training on the basics of the platform and plan to increase my knowledge over the next year."
+  },
+  {
+    "imgUrl": "./data/logos/jquery.svg", 
+    "description": "Before I learned Angular JQuery was used in almost all my projects. I am still proficient in JQuery and often use it when creating angular directives."
+  },
+  {
+    "imgUrl": "./data/logos/php.svg", 
     "description": "I have built various sites that utilize PHP server side scripting to query databases and run C.R.U.D. operations."
   },
   {
-    "imgUrl": "./src/images/angularjs.jpg", 
-    "description": "I am currently learning AngularJS in order to build front end web apps that require less requests to the server."
+    "imgUrl": "./data/logos/ajax.svg", 
+    "description": "Although ajax functinality is abstracted away from the developer when using powerful frameworks like Angular, I stil understand the core funtinality of Ajax and can write a vanilla Ajax script that sends HTTP requests."
   },
   {
-    "imgUrl": "./src/images/C.jpg", 
+    "imgUrl": "./data/logos/c.svg", 
     "description": "I used the C programming language to code a simple bash shell for UNIX operating systems. The shell ran basic commands such as 'ls' and 'mv'. A linked list was used for job control."
   },
   {
-    "imgUrl": "./src/images/asp.jpg", 
-    "description": "I am proficient in Visual Studio and have built web sites using the ASP.NET framework. C# was used on the back-end along with a Microsoft Access database to store data."
-  },
-  {
-    "imgUrl": "./src/images/java.jpg", 
+    "imgUrl": "./data/logos/java.svg", 
     "description": "I have experience building Java GUI applications that implement Object Oriented design concepts."
   },
   {
-    "imgUrl": "./src/images/linux.jpg", 
-    "description": "I am most familiar with Ubuntu and know how to operate the system from the command shell."
-  },
-  {
-    "imgUrl": "./src/images/mysql.jpg", 
-    "description": "I have built and used MYSQL databases. SQL commands were executed on the database using PHP scripts.."
+    "imgUrl": "./data/logos/mysql.svg", 
+    "description": "I have built and used MYSQL databases. SQL commands were executed on the database using PHP scripts."
   }
 ]

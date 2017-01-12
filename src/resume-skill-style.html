@@ -2,13 +2,19 @@
 <dom-module id="resume-skill-style">
   <template>
     <style>
+      *, :host {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
       :host {
         display: block;
         position: relative;
       }
 
       img {
-        width:70%;
+        width:50%;
         display:block;
         margin:auto;
         z-index:1;
@@ -78,6 +84,22 @@
         -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
         padding:5px;
+      }
+
+      @media(max-width: 767px) {
+        img {
+          width:60%;
+        }
+
+        .description {
+          font-size: .8em;
+        }
+      }
+
+      @media(max-width: 400px) {
+        img {
+          width:55%;
+        }
       }
     </style>
   </template>
