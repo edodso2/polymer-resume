@@ -1,0 +1,137 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!--
+`ed-resume-skill`
+A simple flip card for skills on my resume site
+
+@demo demo/index.html 
+-->
+
+<dom-module id="resume-experience">
+  <template>
+    <style>
+
+      /* Grid Styles */
+      :host {
+        display: block;
+        color: #414141;
+        background: #f2f2f2;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      .centered-container {
+        max-width: 1000px;
+        margin: 80px auto;
+        margin-top: 60px;
+      }
+
+      @media(max-width: 767px) {
+
+        .centered-container {
+          margin: 20px 5px;
+          margin-top: 10px;
+        }
+
+      }
+
+      .experience:not(:first-child) {
+        margin-top: 80px;
+      }
+
+      .experience {
+        display: flex;
+      }
+
+      .logo {
+        flex-basis: 25%;
+        margin-right: 20px;
+      }
+
+      .logo img {
+        width: 90%;
+        display: block;
+        margin: auto;
+      }
+
+      .description {
+        flex-basis: 75%;
+        align-self: center;
+        font-size: 1.2em;
+      }
+
+      .job {
+        font-size: 1.6em;
+      }
+
+      /* General Style */
+      .description p {
+        font-size:1.2em;
+      }
+
+      @media(max-width: 767px) {
+        .description {
+          font-size:.8em;
+          text-align: center;
+          margin-top: 10px;
+        }
+
+        .experience {
+          display: block;
+          margin-top: 10px;
+        }
+
+        .logo img {
+          width: 50%;
+        }
+
+        :host {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+      }
+
+    </style>
+    <div class="centered-container">
+      <template is="dom-repeat" items="[[experience]]" as="job">
+        <div class="experience">
+          <div class="logo">
+            <img src$="[[job.imgUrl]]">
+          </div>
+          <div class="description">
+            <div class="job">[[job.name]]</div>
+            <div>[[job.title]]</div>
+            <div>[[job.degree]]</div>
+            <div>[[job.description]]</div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'resume-experience',
+
+      ready: function() {
+        this.experience = [
+          {
+            imgUrl: 'src/images/p1.jpg',
+            name: 'Priority 1 Autogroup',
+            title: 'Web Developer Intern',
+            time: '2014 - 2015',
+            description: 'Maintained and designed various web pages such as the monthly special webpage for BMW, Maserati, and Porsche. Designed email templates in eLeads for monthly newsletters and lead responses. Designed banners, graphics, and web pages for the company’s public web sites. Managed inventory using vAuto and Dealer.com cloud software.',
+          },
+          {
+            imgUrl: 'src/images/arena.jpg',
+            name: 'Arena Motorgroup ',
+            title: 'Inventry Assistant',
+            time: '2010 - 2013'
+          }
+        ]
+      }
+
+    })
+  </script>
+</dom-module>

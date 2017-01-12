@@ -1,0 +1,50 @@
+[
+  {
+    "imgUrl": "./src/images/HTML5.jpg", 
+    "description": "I have been working with HTML since I learned XHTML in 2010. I am very proficient in HTML5 and have lots of experience creating websites from scratch with no frameworks or development tools."
+  },
+  {
+    "imgUrl": "./src/images/CSS3.jpg", 
+    "description": "I have built many web pages using CSS for styling. This page uses CSS3 transitions and transforms for effects."
+  },
+  {
+    "imgUrl": "./src/images/JS.jpg", 
+    "description": "JavaScript has been used in many of my projects for form validation. I have also used JavaScript for slide-shows and other features not possible with HTML5 or CSS3."
+  },
+  {
+    "imgUrl": "./src/images/ajax.jpg", 
+    "description": "I commonly incorporate Ajax into my projects alongside PHP. I do this by calling a PHP script via Ajax to query a database and update page content."
+  },
+  {
+    "imgUrl": "./src/images/jquery.jpg", 
+    "description": "JQuery is used in almost all my projects. Although I prefer Twitter Bootstrap for page layout, JQuery is helpful for adding widgets, simplifying JavaScript code, and creating animations."
+  },
+  {
+    "imgUrl": "./src/images/php.jpg", 
+    "description": "I have built various sites that utilize PHP server side scripting to query databases and run C.R.U.D. operations."
+  },
+  {
+    "imgUrl": "./src/images/angularjs.jpg", 
+    "description": "I am currently learning AngularJS in order to build front end web apps that require less requests to the server."
+  },
+  {
+    "imgUrl": "./src/images/C.jpg", 
+    "description": "I used the C programming language to code a simple bash shell for UNIX operating systems. The shell ran basic commands such as 'ls' and 'mv'. A linked list was used for job control."
+  },
+  {
+    "imgUrl": "./src/images/asp.jpg", 
+    "description": "I am proficient in Visual Studio and have built web sites using the ASP.NET framework. C# was used on the back-end along with a Microsoft Access database to store data."
+  },
+  {
+    "imgUrl": "./src/images/java.jpg", 
+    "description": "I have experience building Java GUI applications that implement Object Oriented design concepts."
+  },
+  {
+    "imgUrl": "./src/images/linux.jpg", 
+    "description": "I am most familiar with Ubuntu and know how to operate the system from the command shell."
+  },
+  {
+    "imgUrl": "./src/images/mysql.jpg", 
+    "description": "I have built and used MYSQL databases. SQL commands were executed on the database using PHP scripts.."
+  }
+]

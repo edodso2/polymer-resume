@@ -1,0 +1,130 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-layout/app-grid/app-grid-style.html">
+<link rel="import" href="./resume-skill.html">
+
+<!--
+`ed-resume-skill`
+A simple flip card for skills on my resume site
+
+@demo demo/index.html 
+-->
+
+<dom-module id="resume-skills">
+  <template>
+    <style include="app-grid-style">
+
+      :host {
+        display: block;
+        --app-grid-columns: 3;
+        --app-grid-gutter: 5px;
+        --app-grid-item-height: 250px;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+
+      .centered-container {
+        margin-top: 40px;
+        max-width: 1000px;
+        margin: 40px auto;
+      }
+
+      @media(max-width: 991px) {
+
+        :host {
+          --app-grid-columns: 3;
+        }
+
+      }
+
+      @media(max-width: 767px) {
+
+        :host {
+          --app-grid-columns: 2;
+          --app-grid-gutter: 5px;
+          --app-grid-item-height: 200px;
+        }
+
+        .centered-container {
+          margin: 10px 5px;
+        }
+
+      }
+
+      @media(max-width: 400px) {
+
+        :host {
+          --app-grid-columns: 1;
+          --app-grid-item-height: 250px;
+        }
+
+      }
+
+    </style>
+    <div class="centered-container">
+      <ul class="app-grid">
+        <template is="dom-repeat" items="[[skills]]" as="skill">
+          <li class="item">
+            <resume-skill img-url="[[skill.imgUrl]]" description="[[skill.description]]"></resume-skill>
+          </li>
+        </template>
+      </ul>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'resume-skills',
+
+      ready: function() {
+        this._getSkills(1);
+      },
+
+      properties: {
+        skills: {
+          type: Array,
+          value: [],
+          notify: true
+        },
+        failure: {
+          type: Boolean,
+          notify: true,
+          readOnly: true
+        }
+      },
+
+      _getSkills: function(attempts) {
+        this._setFailure(false);
+
+        this._getResource({
+          url: '/data/skills.json',
+          onLoad: function(e) {
+            this.set('skills', JSON.parse(e.target.responseText));
+          },
+          onError: function(e) {
+            this._setFailure(true);
+          }
+        }, attempts);
+      },
+
+      _getResource: function(rq, attempts) {
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', rq.onLoad.bind(this));
+        xhr.addEventListener('error', function(e) {
+          // Flaky connections might fail fetching resources
+          if (attempts > 1) {
+            this.debounce('_getResource', this._getResource.bind(this, rq, attempts - 1), 200);
+          } else {
+            rq.onError.call(this, e);
+          }
+        }.bind(this));
+        xhr.open('GET', rq.url);
+        xhr.send();
+      }
+
+    });
+  </script>
+</dom-module>

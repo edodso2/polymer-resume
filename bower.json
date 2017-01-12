@@ -1,0 +1,23 @@
+{
+  "name": "resume",
+  "description": "My personal resume site",
+  "main": "index.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer",
+    "app-layout": "PolymerElements/app-layout",
+    "paper-tabs": "PolymerElements/paper-tabs",
+    "paper-menu": "PolymerElements/paper-menu",
+    "paper-item": "PolymerElements/paper-item",
+    "iron-scroll-threshold": "PolymerElements/iron-scroll-threshold",
+    "iron-icons": "PolymerElements/iron-icons",
+    "iron-media-query": "PolymerElements/iron-media-query",
+    "paper-icon-button": "PolymerElements/paper-icon-button",
+    "paper-card": "PolymerElements/paper-card"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs"
+  }
+}

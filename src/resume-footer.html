@@ -1,0 +1,76 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!--
+`ed-resume-skill`
+A simple flip card for skills on my resume site
+
+@demo demo/index.html 
+-->
+
+<dom-module id="resume-footer">
+  <template>
+    <style>
+
+      /* Grid Styles */
+      :host {
+        display: block;
+        color: #fff;
+        background: #2C2C2E;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        height: 60vh;
+      }
+
+      .centered-container {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .footer {
+        display: flex;
+        width: 100%;
+      }
+
+      .contact {
+        font-size: 1.4em;
+      }
+
+      .links {
+        margin-left: auto;
+      }
+
+      .links a {
+        display: block;
+      }
+
+      @media(max-width: 767px) {
+        .footer {
+          display: block;
+        }
+      }
+
+    </style>
+    <div class="centered-container">
+      <div class="footer">
+        <div class="contact">
+          Eric Dodson <br>
+          Web Developer <br>
+          Baltimore, MD
+        </div>
+        <div class="links">
+          <a href="files/EricDodson_Resume_2015.pdf" target="_blank" class="btn btn-success btn-block" role="button">PDF Version of Resume</a>
+          <a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile" target="_blank" class="btn btn-primary btn-block"
+            role="button">My LinkedIn Page</a>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'resume-footer'
+
+    })
+  </script>
+</dom-module>

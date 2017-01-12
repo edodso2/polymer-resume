@@ -1,0 +1,40 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="./resume-skill-style.html">
+
+<!--
+`ed-resume-skill`
+A simple flip card for skills on my resume site
+
+@demo demo/index.html 
+-->
+
+<dom-module id="resume-skill">
+  <template>
+    <style include="resume-skill-style"></style>
+    <img src$="[[imgUrl]]" alt="Eric Dodson">
+    <div class="description">
+      <p>
+        [[description]]
+      </p>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'resume-skill',
+
+      properties: {
+        imgUrl: {
+          type: String,
+          value: './src/images/angularjs.jpg'
+        },
+        description: {
+          type: String,
+          value: 'Description coming soon.'
+        }
+      }
+
+    });
+  </script>
+</dom-module>

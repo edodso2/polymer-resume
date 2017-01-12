@@ -1,0 +1,100 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+
+<!--
+`ed-resume-skill`
+A simple flip card for skills on my resume site
+
+@demo demo/index.html 
+-->
+
+<dom-module id="resume-about">
+  <template>
+    <style>
+
+      /* Grid Styles */
+      :host {
+        display: block;
+        color: #6d6d6d;
+        background: #f2f2f2;
+        padding-top: 50px;
+        padding-bottom: 40px;
+        min-height: calc( 100vh - 128px );
+        margin-top: -10px;
+      }
+
+      .centered-container {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      paper-card {
+        width: 100%;
+        padding: 40px;
+        display: flex;
+      }
+
+      img {
+        margin-right: 40px;
+      }
+
+      .emphasize {
+        display: block;
+        font-size: 3em;
+        font-weight: normal;
+      }
+
+      .intro {
+        display: block;
+        font-size: 1.2em;
+        line-height: 1.5em;
+      }
+
+      @media(max-width: 767px) {
+        paper-card {
+          display: block;
+          padding: 10px;
+        }
+
+        img {
+          margin: 0;
+          margin-bottom: 20px;
+        }
+
+        .emphasize {
+          display: block;
+          font-size: 1.5em;
+        }
+
+        .intro {
+          display: block;
+          font-size: 1.0em;
+        }
+      }
+
+    </style>
+    <div class="centered-container">
+      <paper-card>
+        <div>
+          <img src="images/Eric_Dodson.jpg">
+        </div>
+        <div class="about-me">
+          <div class="emphasize">
+            Hello,
+          </div>
+          <div class="intro">
+            my name is Eric Dodson. I have an Associates Degree in Computer Information Systems from Carroll Community College. Currently, I am a full time student at Towson University and majoring in Computer Science. I am expected to graduate this year with a Bachelors Degree. I have been interested in Web Development technologies since I learned XHTML in 2010. I am working as a Web Developer focusing on front-end development and CMS at Priority 1 Automotive Group. I am presently seeking to expand my knowledge in the Web Development field by learning technologies such as Angular, JSF, and Laravel.
+          </div>
+        </div>
+      </paper-card>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'resume-about'
+
+    })
+  </script>
+</dom-module>

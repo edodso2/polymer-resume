@@ -1,0 +1,141 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-layout/app-grid/app-grid-style.html">
+
+<!--
+`ed-resume-skill`
+A simple flip card for skills on my resume site
+
+@demo demo/index.html 
+-->
+
+<dom-module id="resume-projects">
+  <template>
+    <style include="app-grid-style">
+
+      /* Grid Styles */
+      :host {
+        display: block;
+        --app-grid-columns: 2;
+        --app-grid-gutter: 20px;
+        --app-grid-item-height: 275px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+
+      .centered-container {
+        margin-top: 20px;
+        max-width: 1000px;
+        margin: 40px auto;
+      }
+
+      @media(max-width: 767px) {
+
+        :host {
+          --app-grid-columns: 1;
+          --app-grid-gutter: 5px;
+          --app-grid-item-height: auto;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+
+        .centered-container {
+          margin: 10px 5px;
+        }
+
+      }
+
+      /* Fade/Hover Effect */
+      .project {
+        position:relative;
+        width:100%;
+        height:100%;
+        overflow:hidden;
+      }
+
+      .project:hover .description {
+        visibility:visible;
+        opacity: 0.85;
+        transition: all .5s linear;
+      }
+
+      .description {
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        padding:10px;
+        box-sizing: border-box;
+        visibility:hidden;
+        background-color:#111;
+        color:#fff;
+        opacity: 0;
+        transition: all .5s linear;
+      }
+
+      /* General Style */
+      :host {
+        background: #f2f2f2;
+      }
+
+      .description p {
+        font-size:1.2em;
+      }
+
+      @media(max-width: 767px) {
+        .description p {
+          font-size:.8em;
+        }
+      }
+
+    </style>
+    <div class="centered-container">
+      <ul class="app-grid">
+        <template is="dom-repeat" items="[[projects]]" as="project">
+          <li class="item project">
+            <img src$="[[project.imgUrl]]" alt="Eric Dodson" class="" style="width:100%;">
+            <div class="description">
+              <p>
+                [[project.description]]
+              </p>
+            </div>
+          </li>
+        </template>
+      </ul>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'resume-projects',
+
+      ready: function() {
+        this.projects = [
+          {
+            imgUrl: 'src/images/P1Reviews.jpg',
+            description: ' The Priority 1 Reviews site was built to direct customers in order to better handle reviews. The site uses the Skeleton CSS boilerplate to simplify the page layout. Media Queries are used to optimize the site for different view-ports. The site uses JQuery to select a rating and redirect users based on their response rating. PHP is used to validate the negative reviews form and submit negative reviews to the corresponding store manager for further action.'
+          },
+          {
+            imgUrl: 'src/images/BMWSpecials.jpg',
+            description: 'The BMW New Car Specials page is used to provide users with a quick glance at BMW\'s monthly financing specials. The page was built using the Dealer.com CMS and is styled with CSS.'
+          },
+          {
+            imgUrl: 'src/images/P1ReviewsAngular.jpg',
+            description: 'This is a new version of the Priority 1 Reviews site that is built on the Bootstrap and AngularJS frameworks. The site uses the ng-view directive and routes to simplify the website design and decrease the amount of code needed significantly. The site uses route parameters to determine which store to display based on the URL. The URL\'s on the \'reviewus\' page are binded to the DOM by using an Angular service to read the URL\'s from a JSON file and store them in scope variables. The site also uses AngularJS for form validation.'
+          },
+          {
+            imgUrl: 'src/images/dealerSite.jpg',
+            description: 'The Elite Auto Sales site is a demo car dealership site. The site displays the inventory of cars by querying a SQL database via PHP. Ajax is used to call PHP scripts to allow a user to filter the inventory. CRUD operations can be performed on the database via the admin page. The username for the admin page is \'guest\' and the password is \'admin\'.'
+          }
+        ]
+      }
+
+    })
+  </script>
+</dom-module>

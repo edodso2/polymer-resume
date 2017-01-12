@@ -1,0 +1,125 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!--
+`ed-resume-skill`
+A simple flip card for skills on my resume site
+
+@demo demo/index.html 
+-->
+
+<dom-module id="resume-education">
+  <template>
+    <style>
+
+      /* Grid Styles */
+      :host {
+        display: block;
+        color: #414141;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+
+      .centered-container {
+        max-width: 1000px;
+        margin: 80px auto;
+        margin-top: 60px;
+      }
+
+      @media(max-width: 767px) {
+
+        .centered-container {
+          margin: 20px 5px;
+          margin-top: 10px;
+        }
+
+      }
+
+      .education {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .logo img {
+        width: 50%;
+        display: block;
+        margin: auto;
+      }
+
+      .description {
+        align-self: center;
+        font-size: 1.2em;
+      }
+
+      .school {
+        font-size: 1.6em;
+      }
+
+      /* General Style */
+      .description p {
+        font-size:1.2em;
+      }
+
+      @media(max-width: 767px) {
+        .description {
+          font-size:.8em;
+          text-align: center;
+          margin-top: 10px;
+        }
+
+        .education {
+          display: block;
+          margin-top: 10px;
+        }
+      }
+
+    </style>
+    <div class="centered-container">
+      <template is="dom-repeat" items="[[education]]" as="school">
+        <div class="education">
+          <div class="logo">
+            <img src$="[[school.imgUrl]]" class="img-responsive">
+          </div>
+          <div class="description">
+            <span class="school">[[school.name]]</span>
+            <br>
+            <span class="info">[[school.time]]</span>
+            <br>
+            <span class="info">[[school.degree]]</span>
+            <br>
+            <span class="info">[[school.gpa]]</span>
+          </div>
+        </div>
+      </template>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'resume-education',
+
+      ready: function() {
+        this.education = [
+          {
+            imgUrl: 'src/images/Towson.jpg',
+            name: 'Towson University',
+            time: '2013 - 2015',
+            degree: 'Computer Science',
+            gpa: '3.2'
+          },
+          {
+            imgUrl: 'src/images/carroll.jpg',
+            name: 'Carroll Community College',
+            time: '2011 - 2013',
+            degree: 'Computer Information Systems',
+            gpa: 'Graduated Highest Honors'
+          }
+        ]
+      }
+
+    })
+  </script>
+</dom-module>

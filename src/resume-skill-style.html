@@ -1,0 +1,84 @@
+<!-- shared-styles.html -->
+<dom-module id="resume-skill-style">
+  <template>
+    <style>
+      :host {
+        display: block;
+        position: relative;
+      }
+
+      img {
+        width:70%;
+        display:block;
+        margin:auto;
+        z-index:1;
+        position:relative;
+        
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        
+        -webkit-transition: all .8s linear;
+        transition: all .8s linear;
+        
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        
+        -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+        backface-visibility: hidden;
+      }
+
+      :host:hover img {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        
+        -webkit-transition: all .8s linear;
+        transition: all .8s linear;
+
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        
+        -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+        backface-visibility: hidden;
+      }
+ 
+      :host:hover .description {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        
+        -webkit-transition: all .8s linear;
+        transition: all .8s linear;
+
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        
+        display:block;
+        
+        -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+        backface-visibility: hidden;
+      }
+    
+      .description {
+        display:block;
+        width:100%;
+        height:100%;
+        background-color:white;
+        position:absolute;
+        top:0;
+        left:0;
+        
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        
+        -webkit-transition: all .8s linear;
+        transition: all .8s linear;
+        
+        -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+        backface-visibility: hidden;
+        
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        padding:5px;
+      }
+    </style>
+  </template>
+</dom-module>
